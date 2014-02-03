@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Notepad</title>
+<script src="http://code.jquery.com/jquery-1.6.4.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		//		var url = "https://lush-life.appspot.com/oauth2callback#"+
+		//		"access_token=ya29.AHES6ZQjevovCwk_l7JACG2djIJu0ZAMHREL1VsFdpHwyRo&"+
+		//		"token_type=Bearer&"+
+		//		"expires_in=3600"";
+		function success(data, status) {
+			console.log("data");
+			console.log(data);
+		}
+		function test() {
+			var test"http://developers.google.com/+/api/latest/activities/list##_s=plus&_v=v1&_m=activities.list&maxResults=20&pageToken=eJxb85aBtbiIQTArsSxRLycxL13PM68kNT21SOjRgiXfG9stmBgYPRlYyxJzSlMrihgEEOr8SnOTUova1kyV5Z7yoJuJgaGigIFBtaG4kKGOAQTY4SyG0iIGpmhP310JamWvNi2FKmVg362wJeHKzUAL28mnq2ZbFuxbrHvym7_sB6uelwXbS0GaWRkYGHUYRsEoGAWjYIgAANZ6NoA&userId=105985051804042965233&collection=public";
+			$
+					.ajax({
+						url : 'https://www.googleapis.com/plus/v1/people/105985051804042965233',
+						data : {
+							access_token : 'ya29.AHES6ZQjevovCwk_l7JACG2djIJu0ZAMHREL1VsFdpHwyRo',
+							format : 'json'
+
+						},
+						dataType : 'jsonp',
+						jsonp : 'callback',
+						complete : function() {
+							console.log("complete")
+						},
+						success : function(data, status) {
+							console.log("data");
+							console.log(data);
+						},
+						beforeSend : function() {
+							console.log("send");
+						},
+						error : function(msg) {
+							console.log("error");
+							console.log(msg);
+						}
+					});
+		}
+	</script>
+	<a
+		href='https://accounts.google.com/o/oauth2/auth?client_id=368432238915@developer.gserviceaccount.com&redirect_uri=https://lush-life.appspot.com/oauth2callback&scope=https://www.googleapis.com/auth/plus.me&response_type=token'>
+		move </a>
+	<input type="button" value="invoke" onclick="test()" />
+	<canvas id="canvas" height="512" width="512"></canvas>
+</body>
+</html>
